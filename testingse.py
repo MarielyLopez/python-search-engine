@@ -4,8 +4,9 @@ import unittest
 
 class TestSearchEngine(unittest.TestCase):
 
-    def test_(self):
-        self.assertEqual(application.page_name( 'www.wikipedia.com'),True)
+    def test_length(self):
+        self.assertGreater (4, 1)
+
 
 if __name__ == '__main__':
     unittest.main()

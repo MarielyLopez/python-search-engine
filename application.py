@@ -19,10 +19,12 @@ def insert_url():
             print "   Page not found! :("
 
 
+
 def enter_of_answers():
     link1, answer_one = insert_url()
     link2, answer_two = insert_url()
     insert_word(answer_one,answer_two,link1,link2)
+
 
 def insert_word(answer_one,answer_two,link1,link2):
     print ""
@@ -34,8 +36,8 @@ def insert_word(answer_one,answer_two,link1,link2):
         if answer_word == False and emptynumb > 0:
             searcher1 = re.findall(word, answer_one)
             searcher2 = re.findall(word, answer_two)
-            coincidence1 = len(searcher1)
-            coincidence2 = len(searcher2)
+            coincidence1 = length(searcher1,searcher2)
+            coincidence2 = length(searcher1,searcher2)
             print " On page to ",link1 +"it was found: ",coincidence1,"words."
             print " On page to ",link2 +"it was found: ",coincidence2,"words."
             print " "
@@ -43,6 +45,12 @@ def insert_word(answer_one,answer_two,link1,link2):
             break
         else:
             print "Enter some data"
+
+def length(searcher1,searcher2):
+    search1 = len(searcher1)
+    return search1
+    search2 = len(searcher2)
+    return search2
 
 def print_recomending(coincidence1,coincidence2,link1,link2):
     if coincidence1 > coincidence2:
